@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header {
+  background-color: #ff5f6d;
+  padding: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+}
+
+.content {
+  position: relative;
+  background: radial-gradient(circle, #ff5f6d, #ff5f6d00);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: bgAnimation 30s infinite linear alternate;
+}
+
+.person-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.person {
+  margin: 0 40px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+  position: relative;
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.avatar:hover::before {
+  border-color: #fff;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px; 
+}
+
+#L,
+#Y {
+  font-size: 20px; 
+  color: #fff; 
+  font-style: italic;
+}
+
+.countdown {
+  background-image: radial-gradient(circle, #ff5f6d, #ff5f6d00); 
+  animation: pulse 2s infinite alternate;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 40px;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
