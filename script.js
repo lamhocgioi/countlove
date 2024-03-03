@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var birthday_L = new Date(2001, 3, 2);
   var birthday_Y = new Date(2002, 4, 12);
 
-  var isDays = true; // Biến để theo dõi trạng thái hiện tại (số ngày hoặc số tháng)
+  var isDays = false; // Biến để theo dõi trạng thái hiện tại (số ngày hoặc số tháng)
 
   // Hàm cập nhật số ngày
   function updateCountdown() {
