@@ -120,6 +120,11 @@ body {
   margin-top: 40px;
 }
 
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease forwards;
+}
+
 /* Định nghĩa hiệu ứng */
 @keyframes birthday-animation {
   0% {
@@ -158,5 +163,25 @@ body {
 
   to {
     transform: translateY(0%);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
