@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var birthday_Y = new Date(2002, 4, 12);
   var isDays = false;
   var isBirthdayAlertDisplayed = false;
+  var isCongratulateAlertDisplayed = false;
 
   var birthdaysQueue = [
     { date: birthday_Y, id: "birth_date", name: "Yên" },
@@ -33,6 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       countdownElement.textContent = daysDiff + ' days';
     }
+
+    if (!isCongratulateAlertDisplayed) {
+      if (daysDiff % 100 == 0) {
+        document.getElementById('congratulate').className = "congratulate";
+        document.getElementById('congratulate').innerHTML = "Happy " + daysDiff + " days! 🎉🎉🎉🎉";
+        Swal.fire({
+          title: 'Happy ' + daysDiff + ' days! 🎉🎉🎉🎉',
+          text: 'Wishing you all the best on your special day!'
+        });
+        isCongratulateAlertDisplayed = true;
+      } else {
+        document.getElementById('congratulate').className = "congratulate-end";
+        document.getElementById('congratulate').innerHTML = "";
+      }
+    }
   }
 
   function calculateAge(birthdate) {
@@ -60,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
           Swal.fire({
             title: 'Happy Birthday ' + name + '! 🎉🎂',
             text: 'Wishing you all the best on your special day!'
-          // icon: 'success'
-          // confirmButtonText: 'OK'
+            // icon: 'success'
+            // confirmButtonText: 'OK'
           });
           tippy('#' + id, {
             content: 'Happy Birthday ' + name + '! 🎉🎂',
@@ -71,12 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
           isBirthdayAlertDisplayed = true;
         }
 
-        document.getElementById(id).className = "birthday-wish"
+        document.getElementById(id).className = "birthday-wish";
         document.getElementById(id).innerHTML = "Happy birthday " + name + " 🎂🎂! ";
         // birthdaysQueue.splice(i, 1);
         break;
       } else {
-        document.getElementById(id).className = "birthday-wish-end"
+        document.getElementById(id).className = "birthday-wish-end";
         document.getElementById(id).innerHTML = "";
       }
     }
@@ -91,7 +107,27 @@ document.addEventListener("DOMContentLoaded", function () {
     isDays = !isDays;
   }
 
+  function changeImageOverL() {
+    document.getElementById("avatarL").src = "image/L2.jpg";
+  }
+
+  function changeImageOutL() {
+    document.getElementById("avatarL").src = "image/L.jpeg";
+  }
+
+  function changeImageOverY() {
+    document.getElementById("avatarY").src = "image/Y2.jpg";
+  }
+
+  function changeImageOutY() {
+    document.getElementById("avatarY").src = "image/Y.png";
+  }
+
   document.getElementById("countdown").addEventListener("click", toggleCountdown);
+  document.getElementById("avatarL").addEventListener("mouseover", changeImageOverL);
+  document.getElementById("avatarL").addEventListener("mouseout", changeImageOutL);
+  document.getElementById("avatarY").addEventListener("mouseover", changeImageOverY);
+  document.getElementById("avatarY").addEventListener("mouseout", changeImageOutY);
 
   setInterval(updateCountdown, 1000);
   setInterval(checkBirthday, 1000);

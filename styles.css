@@ -106,10 +106,22 @@ body {
   font-weight: bold;
   color: #fff;
   margin-top: 40px;
+  cursor: pointer;
   animation: slideIn 1s ease-in-out forwards;
 }
 /* Thêm giao diện cho lời chúc mừng sinh nhật */
 .birthday-wish {
+  color: #FF0000;
+  animation: birthday-animation 1s ease-in-out infinite alternate;
+  background-image: radial-gradient(circle, #ffa4ab, #ff626f00);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.congratulate {
   color: #FF0000;
   animation: birthday-animation 1s ease-in-out infinite alternate;
   background-image: radial-gradient(circle, #ffa4ab, #ff626f00);
