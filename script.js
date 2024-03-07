@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function changeImageOverY() {
-    document.getElementById("avatarY").src = "image/Y2.jpg";
+    document.getElementById("avatarY").src = "image/Y2.JPG";
   }
 
   function changeImageOutY() {
