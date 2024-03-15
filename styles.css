@@ -33,6 +33,10 @@ body {
   animation: bgAnimation 30s infinite linear alternate;
 }
 
+.image-top {
+  height: 75px;
+}
+
 .person-row {
   display: flex;
   justify-content: center;
