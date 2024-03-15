@@ -89,11 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById(id).className = "birthday-wish";
         document.getElementById(id).innerHTML = "Happy birthday " + name + " 🎂🎂! ";
+        document.getElementById('image-top').src = "https://media0.giphy.com/media/5tiJtxFgWhp6lYYIr0/giphy.webp";
         // birthdaysQueue.splice(i, 1);
         break;
       } else {
         document.getElementById(id).className = "birthday-wish-end";
         document.getElementById(id).innerHTML = "";
+        document.getElementById('image-top').src = "https://media1.giphy.com/media/2vkUyaJW3gVQtSfs2I/giphy.webp";
       }
     }
   }
