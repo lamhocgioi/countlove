@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var remainingDaysInMonth = remainingDays % 30;
       var output = '';
 
-      if (yearDiff > 0) output += yearDiff + ' years ';
+      if (yearDiff = 1) output += yearDiff + ' year ';
+      if (yearDiff > 1) output += yearDiff + ' years ';
       if (monthsDiff > 0) output += monthsDiff + ' months ';
       if (remainingDaysInMonth > 0) output += remainingDaysInMonth + ' days';
       if (output == '') output = '0 days';
