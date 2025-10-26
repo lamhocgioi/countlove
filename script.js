@@ -3,7 +3,7 @@
 
   // Constants
   const START_DATE = new Date(2023, 9, 28); // 28/10/2023 (Tháng trong JS là 0-11, nên 9 là tháng 10)
-  const BIRTHDAY_L = new Date(2001, 9, 30);
+  const BIRTHDAY_L = new Date(2001, 3, 2);
   const BIRTHDAY_Y = new Date(2002, 4, 12);
   const MS_PER_DAY = 1000 * 3600 * 24;
   const UPDATE_INTERVAL = 1000;
